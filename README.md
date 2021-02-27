@@ -1,14 +1,14 @@
 # Prisma x GraphQL API Server
 
-## init
+## 開発準備
 
 ```bash
 npm install             # 依存関係のインストール
 docker-compose up -d    # postgres server の立ち上げ
-npx prisma generate     # prisma によるライブラリの生成
+npm run setup           # セットアップコマンド
 ```
 
-## development
+## 開発
 
 開発サーバーの立ち上げ
 
@@ -19,11 +19,21 @@ npm run dev
 マイグレーション
 
 ```bash
-npx prisma migrate dev --preview-feature
+npm run migrate
 ```
 
 シード
 
 ```bash
-npx prisma db seed
+npm run seed
 ```
+
+## etc
+
+HTTP SERVER: apollo-server
+GraphQL Schema: @nexus/schema
+
+## docs
+
+- [prisma setup guide](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres)
+- [prisma graphql intro](https://www.prisma.io/docs/concepts/overview/prisma-in-your-stack/graphql)
