@@ -9,7 +9,8 @@
     "generate:nexus": "ts-node --transpile-only src/schema",
     "seed": "prisma db seed --preview-feature",
     "setup": "npm -s run generate && npm -s run seed",
-    "dev": "ts-node-dev --no-notify --respawn --transpile-only src/server"
+    "dev": "ts-node-dev --no-notify --respawn --transpile-only src/server",
+    "migrate": "prisma migrate dev --preview-feature"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
